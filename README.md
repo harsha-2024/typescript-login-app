@@ -17,7 +17,7 @@ backend/
     ├── services/
     │   └── user.service.ts
     └── routes/
-        └── auth.routes.ts
+    └── auth.routes.ts
 
 ✅ Features:
 
