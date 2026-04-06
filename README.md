@@ -1,7 +1,7 @@
 # typescript-login-app
 User registration Login with hashed passwords (bcrypt) JWT authentication Protected route (/auth/profile) Fully written in TypeScript
 
-Backend (Node.js + Express + TypeScript)
+**Backend (Node.js + Express + TypeScript)**
 backend/
 ├── package.json
 ├── tsconfig.json
@@ -18,8 +18,8 @@ backend/
     │   └── user.service.ts
     └── routes/
     └── auth.routes.ts
-
-✅ Features:
+**
+✅ Features:**
 
 User registration
 Login with hashed passwords (bcrypt)
@@ -27,22 +27,27 @@ JWT authentication
 Protected route (/auth/profile)
 Fully written in TypeScript
 
-How to run the backend:
+**How to run the backend:**
 
 cd login-app/backend
+
 npm install
+
 npx ts-node-dev src/server.ts
+
 
 Backend runs on:
 http://localhost:4000
 
 🔐 Example API calls
+
 Register
 POST /auth/register
 {
   "email": "user@test.com",
   "password": "password123"
 }
+
 
 Login
 POST /auth/login
@@ -65,10 +70,18 @@ Headers:
 Content-Type: application/json
 
 Body → raw → JSON
-JSON{  "email": "test@example.com",  "password": "password123"}Show more lines
+JSON
+
+{  "email": "test@example.com",
+"password": "password123"}
 
 ✅ Expected Response
-JSON{  "id": "some-uuid",  "email": "test@example.com"}Show more lines
+JSON
+
+{  "id": "some-uuid", 
+"email": "test@example.com"}
+
+
 ✅ This means the user was successfully registered.
 
 2️⃣ Test Login API
@@ -87,7 +100,9 @@ Body → raw → JSON
 JSON{  "email": "test@example.com",  "password": "password123"}Show more lines
 
 ✅ Expected Response
-JSON{  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJShow more lines
+JSON
+{  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJShow more lines
+
 ⚠️ Copy this token — you will use it in the next step.
 
 3️⃣ Test Protected Profile API
@@ -106,7 +121,15 @@ KeyValueAuthorizationBearer <PASTE_YOUR_TOKEN>
 Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 ✅ Expected Response
-JSON{  "user": {    "userId": "some-uuid",    "iat": 1712399999,    "exp": 1712403599  }}Show more lines
+JSON
+
+{  "user": 
+
+{    "userId": "some-uuid",
+"iat": 1712399999,
+"exp": 1712403599
+}}
+
 ✅ This proves:
 
 JWT works
